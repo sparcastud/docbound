@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sparcastud-docbound"
+version = "0.1.0"
+description = "从样本里推断训练数据的文档边界应有的字段集合，逐字段检查存在性与类型，缺失项单独列出"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "sparcastud" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://sparcastud.github.io"
+Repository = "https://github.com/sparcastud/docbound"
+Issues = "https://github.com/sparcastud/docbound/issues"
+
+[project.scripts]
+docbound = "docbound:main"
+
+[tool.setuptools]
+py-modules = ["docbound"]
